@@ -37,6 +37,20 @@ After completing all parts of this module, you will have fulfilled an ABFM Part 
                 </div>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Your Profile</div>
+                <div class="card-body">
+                    <ul>
+                        <li>First Name: {{Auth::user()->firstname}}</li>
+                        <li>Last Name: {{Auth::user()->lastname}}</li>
+                        <li>ABFM Number: {{Auth::user()->abfmnumber}}</li>
+                        <li>Email: {{Auth::user()->email}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
