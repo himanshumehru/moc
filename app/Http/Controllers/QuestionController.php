@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Question;
 use Illuminate\Http\Request;
+use App\Forms\createQuestionForm;
 
 class QuestionController extends Controller
 {
@@ -14,7 +15,8 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+        $list = Question::all();
+        return view('crud.showlist', compact('list'));
     }
 
     /**
@@ -24,7 +26,8 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        $form = createQuestionForm::buildForm();
+        return view('crud.create', compact('form'));
     }
 
     /**

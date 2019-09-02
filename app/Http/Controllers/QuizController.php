@@ -14,7 +14,8 @@ class QuizController extends Controller
      */
     public function index()
     {
-        //
+        $allquizzes = Quiz::all();
+        return view('quiz.show', compact('allquizzes'));
     }
 
     /**
@@ -23,8 +24,8 @@ class QuizController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    { 
+        return view('quiz.create');
     }
 
     /**
@@ -35,7 +36,8 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Quiz::create(request(['title', 'description'] ));
+        redirect('/quizzes/');
     }
 
     /**
@@ -80,6 +82,6 @@ class QuizController extends Controller
      */
     public function destroy(Quiz $quiz)
     {
-        //
+        $quiz.delete();
     }
 }

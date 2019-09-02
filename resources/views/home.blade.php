@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12 col-lg-8">
             <div class="card">
                 <div class="card-header">UW FMC Teaching MOC</div>
 
@@ -20,6 +20,7 @@ This module has 4 requirements:
 
                          <ul>
                         <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScU67X4zDXc4mKXKQs6mfFqebPsJ3NQ1A9fZkseMi9FLdCQxw/viewform?vc=0&c=0&w=1&usp=mail_form_link" target="_blank">Complete a short pre-test</a></li>
+                        <li><a href="/one-pager">Read this one-pager about Patient Centered Observation</a></li>
                         <li>Complete the Patient Centered Observation Form (PCOF) online training module at <a href="http://www.pcof.us" target="_blank">www.pcof.us</a></li>
                         <li>Observe the same student 4 times over the course of 6 weeks using the  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeODysWVM9WrwgY4Y9LNUJybK4STc53S9uj_FHd27r10p9ukA/viewform" target="_blank">PCOF</a></li>
                         <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc4hdViTCHau7K67aQAE5kkzkTWq2TycRbaO5IKMvKMKtMMig/viewform?vc=0&c=0&w=1&usp=mail_form_link" target="_blank">Complete a short post-test</a></li>
@@ -38,7 +39,7 @@ After completing all parts of this module, you will have fulfilled an ABFM Part 
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-12 col-lg-4 ">
             <div class="card">
                 <div class="card-header">Your Profile</div>
                 <div class="card-body">
@@ -47,6 +48,8 @@ After completing all parts of this module, you will have fulfilled an ABFM Part 
                         <li>Last Name: {{Auth::user()->lastname}}</li>
                         <li>ABFM Number: {{Auth::user()->abfmnumber}}</li>
                         <li>Email: {{Auth::user()->email}}</li>
+                        <li>Birth Year: {{Auth::user()->age}}</li>
+                        <li>Gender: {{Auth::user()->gender}}</li>
                     </ul>
                 </div>
             </div>

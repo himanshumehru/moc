@@ -12,4 +12,11 @@ class PagesController extends Controller
 		}
     	return view('welcome');
     }
+
+    public function onepager(){
+    	if (Auth::check()) {
+    		return view('one-pager');
+		}
+    	return view('welcome');
+    }
 }

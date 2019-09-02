@@ -12,7 +12,11 @@
 */
 
 Route::get('/', 'PagesController@index');
-
+Route:: get('/one-pager', 'PagesController@onepager');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resources([
+    'questions' => 'QuestionController',
+    'quizzes' => 'QuizController'
+]);

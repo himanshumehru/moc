@@ -36,6 +36,7 @@
                         <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
+                        <li class="nav-item"><a href="{{url('/one-pager')}}" class="nav-link">Introduction</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
