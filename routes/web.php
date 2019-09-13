@@ -13,6 +13,7 @@
 
 Route::get('/', 'PagesController@index');
 Route:: get('/one-pager', 'PagesController@onepager');
+Route:: get('/pretest', 'PagesController@pretest');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

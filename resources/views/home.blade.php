@@ -19,7 +19,7 @@
 This module has 4 requirements:
 
                          <ul>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScU67X4zDXc4mKXKQs6mfFqebPsJ3NQ1A9fZkseMi9FLdCQxw/viewform?vc=0&c=0&w=1&usp=mail_form_link" target="_blank">Complete a short pre-test</a></li>
+                        <li><a href="{{url('/pretest')}}">Complete a short pre-test</a></li>
                         <li><a href="/one-pager">Read this one-pager about Patient Centered Observation</a></li>
                         <li>Complete the Patient Centered Observation Form (PCOF) online training module at <a href="http://www.pcof.us" target="_blank">www.pcof.us</a></li>
                         <li>Observe the same student 4 times over the course of 6 weeks using the  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeODysWVM9WrwgY4Y9LNUJybK4STc53S9uj_FHd27r10p9ukA/viewform" target="_blank">PCOF</a></li>

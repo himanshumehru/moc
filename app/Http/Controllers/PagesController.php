@@ -19,4 +19,10 @@ class PagesController extends Controller
 		}
     	return view('welcome');
     }
+    public function pretest(){
+        if (Auth::check()) {
+            return view('pretest');
+        }
+        return view('welcome');
+    }
 }

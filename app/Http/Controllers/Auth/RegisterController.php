@@ -48,15 +48,24 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $messages = [
+            'abfmnumber.max'=>'The abfmnumber should not be more than 8 digits long.',
+            'abfmnumber.min' => 'The abfmnumber should be at least 4 digits long.',
+            'abfmnumber.integer' => 'The abfmnumber should contain numbers only.',
+            'firstname.regex' => 'First name should only contain letters A-Z.',
+            'lastname.regex' => 'Last name should only contain letters A-Z.',
+            'age.min'=> 'Sorry, You are too old to be doing this.',
+            'age.max' => 'Sorry, you are way too young for doing this.'
+            ];
         return Validator::make($data, [
-            'firstname' => ['required', 'string', 'max:255'],
-            'lastname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'firstname' => ['required', 'string', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'lastname' => ['required', 'string', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'email' => ['required', 'string', 'email:rfc,dns', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'abfmnumber' =>['required', 'unique:users'],
-            'age'=>['required', 'integer'],
-            'gender'=>['required']
-        ]);
+            'abfmnumber' =>['required', 'confirmed','integer', 'min:1000','max:99999999','unique:users'],
+            'age'=>['required', 'integer', 'min:1940', 'max:1995'],
+            'gender'=>['required','in:male,female,other,notsay','string']
+        ], $messages);
     }
 
     /**
