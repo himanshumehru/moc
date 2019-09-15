@@ -1,59 +1,63 @@
 @extends('layouts.app')
-
+@section('title')
+UW FMC Teaching MOC 
+@endsection
 @section('content')
 <div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-12 col-md-10">
+			<h1 class="text-center">UW FMC Teaching MOC</h1>
+			<p>The Department of Family Medicine at the University of Washington School of Medicine is pleased is present the following Maintenance of Certification options that have been approved by American Board of Family Medicine.</p>
+		</div>
+	</div>
     <div class="row justify-content-center">
-        <div class="col-md-12 col-lg-8">
-            <div class="card">
-                <div class="card-header">UW FMC Teaching MOC</div>
+    	<div class="col-sm-12 col-md-6">
+        <div class="card text-center">
+  			<a href="{{url('/pcof')}}"><img class="card-img-top" src="{{ asset('img/pcof-intro.jpg') }}" alt="Card image cap"></a>
+			<div class="card-body">
+			    <h5 class="card-title"><strong>Patient Centered Observation Form MOC</strong></h5>
+<!-- 			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ -->			    <a href="{{url('/pcof')}}" class="btn btn-primary">Get Started</a>
+			</div>
+ 		</div>
+		</div>
+		@include('profile')
+	</div> <!-- end row -->
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+	<div class="row" style="margin-top:20px;">
+		
+		<div class="col-sm-12">
+			<h2 class="text-center">Coming Soon</h2>
+		</div>
+	</div>
+		<div class="row " style="margin-top:20px;">	
+		<div class="col-sm-12 col-md-3"></div>		
+			<div class="col-sm-12 col-md-3">
+        		<div class="card text-center">
+    				<img class="card-img-top" src="{{ asset('img/stfm-intro.jpeg') }}" alt="Card image cap">
 
-                    <p>Thank you for participating in the Patient Centered Observation Educational Quality Improvement module. 
-
-This module has 4 requirements:
-
-                         <ul>
-                        <li><a href="{{url('/pretest')}}">Complete a short pre-test</a></li>
-                        <li><a href="/one-pager">Read this one-pager about Patient Centered Observation</a></li>
-                        <li>Complete the Patient Centered Observation Form (PCOF) online training module at <a href="http://www.pcof.us" target="_blank">www.pcof.us</a></li>
-                        <li>Observe the same student 4 times over the course of 6 weeks using the  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeODysWVM9WrwgY4Y9LNUJybK4STc53S9uj_FHd27r10p9ukA/viewform" target="_blank">PCOF</a></li>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc4hdViTCHau7K67aQAE5kkzkTWq2TycRbaO5IKMvKMKtMMig/viewform?vc=0&c=0&w=1&usp=mail_form_link" target="_blank">Complete a short post-test</a></li>
-                    </ul>
+			 		 <div class="card-body">
+			    		<h5 class="card-title">Teaching Physician MOC</h5>
+<!-- 			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ -->			   		 <a href="#" class="btn btn-primary disabled">Coming Soon</a>
+			  		</div>
+ 				</div>
+			</div>
+		<div class="col-sm-12 col-md-3">
+        <div class="card">
+   			  <img class="card-img-top" src="{{ asset('img/som-intro.png') }}" alt="Card image cap">
+			  <div class="card-body text-center">
+			   <h5 class="card-title">In Development</h5>
+<!-- 			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ -->			    <a href="{{url('/uwfmcmoc')}}" class="btn btn-primary disabled">Coming Soon</a>
+			  </div>
+ 		</div>
+		</div>
+		
+		
+     </div> <!-- end row -->
+ </div>
+    
     
 
-
- 
-
-After completing all parts of this module, you will have fulfilled an ABFM Part IV requirement and we will submit your name and information to the ABFM for credit.
-
- </p>
-
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-12 col-lg-4 ">
-            <div class="card">
-                <div class="card-header">Your Profile</div>
-                <div class="card-body">
-                    <ul>
-                        <li>First Name: {{Auth::user()->firstname}}</li>
-                        <li>Last Name: {{Auth::user()->lastname}}</li>
-                        <li>ABFM Number: {{Auth::user()->abfmnumber}}</li>
-                        <li>Email: {{Auth::user()->email}}</li>
-                        <li>Birth Year: {{Auth::user()->age}}</li>
-                        <li>Gender: {{Auth::user()->gender}}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

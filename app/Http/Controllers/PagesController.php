@@ -25,4 +25,25 @@ class PagesController extends Controller
         }
         return view('welcome');
     }
+
+        public function posttest(){
+        if (Auth::check()) {
+            return view('post-test');
+        }
+        return view('welcome');
+    }
+
+        public function pcof(){
+        if (Auth::check()) {
+            return view('pcof');
+        }
+        return view('welcome');
+    }
+
+    public function editprofile(){
+        if (Auth::check()) {
+            return view('edit-profile');
+        }
+        return view('welcome');
+    }
 }

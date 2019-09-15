@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>UW FMC Teaching MOC</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,8 +38,22 @@
                         <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}">Home</a>
                         </li>
-                        <li class="nav-item"><a href="{{url('/one-pager')}}" class="nav-link">Introduction</a></li>
+                        <!-- <li class="nav-item"><a href="{{url('/one-pager')}}" class="nav-link">Introduction</a></li>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose MOC
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/pcof">Patient Centered Observation Form MOC</a>
+                            <div class="dropdown-divider"></div>
+                              <h2 class="dropdown-header"><strong>Coming Soon:</strong></h2>
+                            <a class="dropdown-item disabled" href="#">Teaching Physician MOC</a>
+                            <a class="dropdown-item disabled" href="#">In Development</a>
+                          </div>
+                        </div> -->
                     </ul>
+
+
                     @endguest
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

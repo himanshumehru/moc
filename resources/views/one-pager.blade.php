@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="container">
-	<div class="row col-sm-12 col-md-10">
+
+	<div class="row">
+		@include('pcof-nav')
+		<div class="col-sm-12 col-md-8">
 		<div class="card">
 			<div class="card-header"><h1>Introduction to the forms</h1></div>
 			<div class="card-body">
@@ -38,6 +41,7 @@
 	<li>Reflect on your own use of one or skills and share your experience with the student if it seems appropriate and if time allows.</li>
 </ol>
     </div>
+		</div>
 		</div>
 	</div>
 </div>
