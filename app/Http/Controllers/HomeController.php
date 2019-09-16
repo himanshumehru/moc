@@ -24,17 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $gender = Auth::user()->gender; 
-        $gender = $this->checkgender($gender);
-        return view('home', compact(['gender']));
+       $user = Auth::user();
+       return view('home', compact('user'));
     }
 
-    public function checkgender($gender){
-        if($gender == 'notsay'){
-            $gender = "I'd rather not say";
-        }else{
-            return ucwords($gender);
-        }  
-        return $gender;
-    }
+ 
 }

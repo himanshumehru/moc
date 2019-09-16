@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class PagesController extends Controller
 {
+    
     public function index(){
     	if (Auth::check()) {
-    		return view('home');
+    		return redirect('/home');
 		}
     	return view('welcome');
     }
@@ -34,8 +35,9 @@ class PagesController extends Controller
     }
 
         public function pcof(){
+            $user = Auth::user();
         if (Auth::check()) {
-            return view('pcof');
+            return view('pcof', compact('user'));
         }
         return view('welcome');
     }

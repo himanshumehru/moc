@@ -4,13 +4,13 @@
                 </div>
                 <div class="card-body">
                     <ul>
-                        <li>First Name: {{Auth::user()->firstname}}</li>
-                        <li>Last Name: {{Auth::user()->lastname}}</li>
-                        <li>ABFM Number: {{Auth::user()->abfmnumber}}</li>
-                        <li>Email: {{Auth::user()->email}}</li>
-                        <li>Birth Year: {{Auth::user()->age}}</li>
-                        <li>Gender: {{Auth::user()->gender == 'notsay'?"I'd rather not say":ucfirst(Auth::user()->gender)}}</li>
-                        <a href="user/{{Auth::user()->id}}/edit">Edit</a>
+                        <li><strong>First Name:</strong> {{$user->firstname}}</li>
+                        <li><strong>Last Name:</strong> {{$user->lastname}}</li>
+                        <li><strong>ABFM Number:</strong> {{$user->abfmnumber}}</li>
+                        <li><strong>Email:</strong> {{$user->email}}</li>
+                        <li><strong>Birth Year:</strong> {{$user->age}}</li>
+                        <li><strong>Gender:</strong> {{$user->gender == 'notsay'?"I'd rather not say":ucfirst($user->gender)}}</li>
+                        <a href="{{route('user.edit', $user->id)}}">Edit</a>
                     </ul>
                 </div>
             </div>

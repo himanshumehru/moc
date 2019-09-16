@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
+use App\User;
 class UsersController extends Controller
 {
     /**
@@ -14,7 +13,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        return redirect('/');
     }
 
     /**
@@ -28,10 +27,10 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -41,7 +40,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        return redirect('/');
     }
 
     /**
@@ -50,9 +49,8 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        $user = \App\User::find($id);
         return view('edit-profile', compact('user'));
     }
 
@@ -63,11 +61,12 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(User $user)
     {
-        echo "string";
-        $user = App\User::find($id);
-        dd($user);
+        $user->update(request(['firstname', 'lastname','email','age','gender']));
+        $user->save();
+        return redirect('/');
+        
     }
 
     /**
