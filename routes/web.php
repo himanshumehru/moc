@@ -16,11 +16,11 @@ Route:: get('/one-pager', 'PagesController@onepager');
 Route:: get('/pretest', 'PagesController@pretest');
 Route:: get('/post-test', 'PagesController@posttest');
 Route:: get('/pcof', 'PagesController@pcof');
-Route:: get('/edit-profile', 'PagesController@editprofile');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resources([
     'questions' => 'QuestionController',
-    'quizzes' => 'QuizController'
+    'quizzes' => 'QuizController',
+    'user' => 'UsersController'
 ]);

@@ -315,9 +315,11 @@ PCOF Post-test
         <label for="how_completing_module_changed">How has completing this module changed the way you manage time during patient encounters?</label> 
         <textarea id="how_completing_module_changed" name="how_completing_module_changed" cols="40" rows="5" required="required" class="form-control"></textarea>
       </div>
+      <hr style="background-color:black;">
+      <hr style="background-color:black;">
       <div class="form-group">
-        <label for="reflecting_feedback">Now, reflecting on your observation and feedback skills at the time of the pretest, please answer these questions as you would have before you started this module.</label> 
-        <textarea id="reflecting_feedback" name="reflecting_feedback" cols="40" rows="5" class="form-control"></textarea>
+    <h4>Now, reflecting on your observation and feedback skills at the time of the pretest, please answer these questions as you would have <u>before you started the PCOF MOC</u></h4> 
+        
       </div>
       <div class="form-group">
         <label>How familiar are you with the components of the patient-centered visit according to the PCOF model?</label> 

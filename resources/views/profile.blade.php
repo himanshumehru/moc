@@ -9,8 +9,8 @@
                         <li>ABFM Number: {{Auth::user()->abfmnumber}}</li>
                         <li>Email: {{Auth::user()->email}}</li>
                         <li>Birth Year: {{Auth::user()->age}}</li>
-                        <li>Gender: {{Auth::user()->gender}}</li>
-                        <a href="{{url('/edit-profile')}}">Edit</a>
+                        <li>Gender: {{Auth::user()->gender == 'notsay'?"I'd rather not say":ucfirst(Auth::user()->gender)}}</li>
+                        <a href="user/{{Auth::user()->id}}/edit">Edit</a>
                     </ul>
                 </div>
             </div>
