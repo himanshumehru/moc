@@ -20,7 +20,7 @@ return [
     'client_id' => env('GOOGLE_CLIENT_ID', '226544930973-dsa44ss4dsnclbdpiklpegoj0dkef3pj.apps.googleusercontent.com'),
     'client_secret' => env('GOOGLE_CLIENT_SECRET', 'MxsoCkbVWmi30NtUTjfVQ3yg'),
     'redirect_uri' => env('GOOGLE_REDIRECT', 'https://isaackeen.com/moc'),
-    'scopes' => ['https://www.googleapis.com/auth/spreadsheets'],
+    'scopes' => [\Google_Service_Sheets::DRIVE, \Google_Service_Sheets::SPREADSHEETS],
     'access_type' => 'online',
     'approval_prompt' => 'auto',
 
