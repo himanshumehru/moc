@@ -1,6 +1,7 @@
         <div class="col-md-4 ">
             <div class="card">
                 <div class="card-header">Your Profile 
+                    <div class="settings-icon" style="float: right;"><a href="{{route('user.edit', $user->id)}}"><i class="fa fa-cogs" aria-hidden="true"></i></a></div>
                 </div>
                 <div class="card-body">
                     <ul>
@@ -10,7 +11,7 @@
                         <li><strong>Email:</strong> {{$user->email}}</li>
                         <li><strong>Birth Year:</strong> {{$user->age}}</li>
                         <li><strong>Gender:</strong> {{$user->gender == 'notsay'?"I'd rather not say":ucfirst($user->gender)}}</li>
-                        <a href="{{route('user.edit', $user->id)}}">Edit</a>
+                        
                     </ul>
                 </div>
             </div>

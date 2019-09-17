@@ -189,7 +189,7 @@ Edit Your Profile
       </div>
     </form>
     <div class="col-sm-12 col-md-8">
-      <p><span class="text-primary">*</span>Please <a href="mailto:himanshu@mehrutherm.com">contact admin</a> if you need to change this value.</p>
+      <p><span class="text-primary">*</span>Please <a href="mailto:moc@mehrutherm.com">contact admin</a> if you need to change this value.</p>
     </div>
 				</div>
 			</div>

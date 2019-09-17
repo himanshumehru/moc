@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 class UsersController extends Controller
 {
     /**
@@ -51,7 +52,12 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        return view('edit-profile', compact('user'));
+        $currentUser = Auth::user();
+        if($currentUser->id == $user->id){
+            return view('edit-profile', compact('user'));
+        }else{
+           return redirect('/');
+        }
     }
 
     /**
@@ -63,10 +69,12 @@ class UsersController extends Controller
      */
     public function update(User $user)
     {
-        $user->update(request(['firstname', 'lastname','email','age','gender']));
-        $user->save();
-        return redirect('/');
-        
+        $currentUser = Auth::user();
+        if($currentUser->id == $user->id){
+           $user->update(request(['firstname', 'lastname','email','age','gender']));
+           $user->save();
+        }
+        return redirect('/');     
     }
 
     /**

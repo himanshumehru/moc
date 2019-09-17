@@ -197,10 +197,11 @@
 
 
  <div class="form-group row">
+
                             <label for="abfmnumber" class="col-md-4 col-form-label text-md-right">ABFM Number</label>
 
                             <div class="col-md-6">
-                                <input id="abfmnumber" type="text" class="form-control @error('abfmnumber') is-invalid @enderror" name="abfmnumber" value="{{ old('abfmnumber') }}" required  autocomplete="abfmnumber">
+                                <input id="abfmnumber" type="text" class="form-control @error('abfmnumber') is-invalid @enderror" name="abfmnumber" value="{{ old('abfmnumber') }}" required  onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off>
 
                                 @error('abfmnumber')
                                     <span class="invalid-feedback" role="alert">
@@ -215,7 +216,7 @@
                             <label for="abfmnumber_confirmation" class="col-md-4 col-form-label text-md-right">Confirm ABFM Number</label>
 
                             <div class="col-md-6">
-                                <input id="abfmnumber_confirmation" type="text" class="form-control @error('abfmnumber') is-invalid @enderror" name="abfmnumber_confirmation" value="{{ old('abfmnumber_confirmation') }}"   required autocomplete="abfmnumber">
+                                <input id="abfmnumber_confirmation" type="text" class="form-control @error('abfmnumber') is-invalid @enderror" name="abfmnumber_confirmation" value="{{ old('abfmnumber_confirmation') }}"   required onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete=off>
                             </div>
 
                         </div>
