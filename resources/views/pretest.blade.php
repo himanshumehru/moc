@@ -11,10 +11,11 @@ PCOF Pre-Test
                 <div class="card-header">Pre-test</div>
 
                 <div class="card-body">
-                	<form>
-      <div class="form-group">
+                	<form method="POST" action="{{route('pretest')}}">
+                    @csrf
+      <div class="form-group ">
         <label for="years_in_practice">Years in practice</label> 
-        <input id="years_in_practice" name="years_in_practice" type="text" required="required" class="form-control">
+        <input id="years_in_practice" name="Years in practice" type="number" required="required" class="form-control">
       </div>
       <div class="form-group">
         <label>Type of practice</label> 
@@ -282,86 +283,86 @@ PCOF Pre-Test
         <div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_0" type="checkbox" required="required" class="custom-control-input" value="Establishes Rapport"> 
+              <input name="check_skills_use[0]" id="check_skills_use_0" type="checkbox" class="custom-control-input" value="Establishes Rapport"> 
               <label for="check_skills_use_0" class="custom-control-label">Establishes Rapport</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_1" type="checkbox" required="required" class="custom-control-input" value="Maintains Relationship Throughout the Visit"> 
+              <input name="check_skills_use[1]" id="check_skills_use_1" type="checkbox" class="custom-control-input" value="Maintains Relationship Throughout the Visit"> 
               <label for="check_skills_use_1" class="custom-control-label">Maintains Relationship Throughout the Visit</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_2" type="checkbox" required="required" class="custom-control-input" value="Collaborative upfront agenda setting"> 
+              <input name="check_skills_use[2]" id="check_skills_use_2" type="checkbox" class="custom-control-input" value="Collaborative upfront agenda setting"> 
               <label for="check_skills_use_2" class="custom-control-label">Collaborative upfront agenda setting</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_3" type="checkbox" required="required" class="custom-control-input" value="Maintains Efficiency using transparent (out loud) thinking and respectful interruption:" > 
+              <input name="check_skills_use[3]" id="check_skills_use_3" type="checkbox" class="custom-control-input" value="Maintains Efficiency using transparent (out loud) thinking and respectful interruption:" > 
               <label for="check_skills_use_3" class="custom-control-label">Maintains Efficiency using transparent (out loud) thinking and respectful interruption:</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_4" type="checkbox" required="required" class="custom-control-input" value="Gathering Information"> 
+              <input name="check_skills_use[4]" id="check_skills_use_4" type="checkbox" class="custom-control-input" value="Gathering Information"> 
               <label for="check_skills_use_4" class="custom-control-label">Gathering Information</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_5" type="checkbox" required="required" class="custom-control-input" value="Assessing Patient or Family Perspective on Health"> 
+              <input name="check_skills_use[5]" id="check_skills_use_5" type="checkbox" class="custom-control-input" value="Assessing Patient or Family Perspective on Health"> 
               <label for="check_skills_use_5" class="custom-control-label">Assessing Patient or Family Perspective on Health</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_6" type="checkbox" required="required" class="custom-control-input" value="Electronic Medical Record Use"> 
+              <input name="check_skills_use[6]" id="check_skills_use_6" type="checkbox" class="custom-control-input" value="Electronic Medical Record Use"> 
               <label for="check_skills_use_6" class="custom-control-label">Electronic Medical Record Use</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_7" type="checkbox" required="required" class="custom-control-input" value="Physical Exam"> 
+              <input name="check_skills_use[7]" id="check_skills_use_7" type="checkbox" class="custom-control-input" value="Physical Exam"> 
               <label for="check_skills_use_7" class="custom-control-label">Physical Exam</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_8" type="checkbox" required="required" class="custom-control-input" value="Sharing Information"> 
+              <input name="check_skills_use[8]" id="check_skills_use_8" type="checkbox" class="custom-control-input" value="Sharing Information"> 
               <label for="check_skills_use_8" class="custom-control-label">Sharing Information</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_9" type="checkbox" required="required" class="custom-control-input" value="Behavior Change/Self Management"> 
+              <input name="check_skills_use[9]" id="check_skills_use_9" type="checkbox" class="custom-control-input" value="Behavior Change/Self Management"> 
               <label for="check_skills_use_9" class="custom-control-label">Behavior Change/Self Management</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_10" type="checkbox" required="required" class="custom-control-input" value="Co-creating a plan"> 
+              <input name="check_skills_use[10]" id="check_skills_use_10" type="checkbox" class="custom-control-input" value="Co-creating a plan"> 
               <label for="check_skills_use_10" class="custom-control-label">Co-creating a plan</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_11" type="checkbox" required="required" class="custom-control-input" value="Closure"> 
+              <input name="check_skills_use[11]" id="check_skills_use_11" type="checkbox" class="custom-control-input" value="Closure"> 
               <label for="check_skills_use_11" class="custom-control-label">Closure</label>
             </div>
           </div>
           <div class="custom-controls-stacked">
             <div class="custom-control custom-checkbox">
-              <input name="check_skills_use" id="check_skills_use_12" type="checkbox" required="required" class="custom-control-input" value="N/A"> 
+              <input name="check_skills_use[12]" id="check_skills_use_12" type="checkbox" class="custom-control-input" value="N/A"> 
               <label for="check_skills_use_12" class="custom-control-label">N/A</label>
             </div>
           </div>
         </div>
       </div> 
       <div class="form-group">
-        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+        <button  type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
                 </div>
