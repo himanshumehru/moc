@@ -17,9 +17,9 @@ return [
     | https://developers.google.com/console
     |
     */
-    'client_id' => env('GOOGLE_CLIENT_ID', '226544930973-dsa44ss4dsnclbdpiklpegoj0dkef3pj.apps.googleusercontent.com'),
-    'client_secret' => env('GOOGLE_CLIENT_SECRET', 'MxsoCkbVWmi30NtUTjfVQ3yg'),
-    'redirect_uri' => env('GOOGLE_REDIRECT', 'https://isaackeen.com/moc'),
+    'client_id' => env('GOOGLE_CLIENT_ID', ''),
+    'client_secret' => env('GOOGLE_CLIENT_SECRET', ''),
+    'redirect_uri' => env('GOOGLE_REDIRECT', ''),
     'scopes' => [\Google_Service_Sheets::DRIVE, \Google_Service_Sheets::SPREADSHEETS],
     'access_type' => 'online',
     'approval_prompt' => 'auto',
@@ -33,7 +33,7 @@ return [
     | a Server key, and not a Browser key.
     |
     */
-    'developer_key' => env('GOOGLE_DEVELOPER_KEY', 'AIzaSyDKZIm-GY74IE6dMu5925HUgg8mFgRf5pI'),
+    'developer_key' => env('GOOGLE_DEVELOPER_KEY', ''),
 
     /*
     |----------------------------------------------------------------------------
