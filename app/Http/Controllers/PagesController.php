@@ -71,9 +71,9 @@ class PagesController extends Controller
         ];
 
 // all() returns array
-$values = Sheets::spreadsheet('1yjdLppsDsQg0trZRBpqLt2h4OUjQxMm1ds-H3oFCPmE')->sheet('Sheet1')->all();
+        $values = Sheets::spreadsheet('1yjdLppsDsQg0trZRBpqLt2h4OUjQxMm1ds-H3oFCPmE')->sheet('Sheet1')->all();
         Sheets::sheet('Sheet 1')->range('A2')->append([['3', 'name3', 'mail3']]);
-$values = Sheets::range('A2')->all();
+        //$values = Sheets::range('A2')->all();
             
             
             dd($result);
